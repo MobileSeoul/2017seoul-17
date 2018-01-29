@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--홈화면 사전선호도 리스트 아이템 레이아웃-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/main_list_shape"
+    android:layout_marginRight="8dp"
+    android:backgroundTint="#70595757"
+    android:layout_width="130dp"
+    android:layout_height="160dp">
+    <ImageView
+        android:id="@+id/home_list_imageview_program"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/home_list_textview_program"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"/>
+</RelativeLayout>

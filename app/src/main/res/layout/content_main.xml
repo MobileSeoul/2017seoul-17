@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:orientation="vertical"
+                                             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                             tools:activity="com.kjh.seoulapp.TourMainActivity"
+                                             tools:layout_editor_absoluteX="0dp"
+                                             tools:layout_editor_absoluteY="81dp"
+                                             tools:showIn="@layout/app_bar_main"
+    >
+
+    <LinearLayout
+        android:id="@+id/main_map_tab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageView
+                android:id="@+id/map_full"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:srcCompat="@drawable/seoul_map"></ImageView>
+
+            <Button
+                android:id="@+id/map_mid_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="95dp"
+                android:background="#00ff0000"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/map_east_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="110dp"
+                android:background="#00ff0000"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/map_west_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="155dp"
+                android:background="#00ff0000"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/map_south_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="180dp"
+                android:background="#00ff0000"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/map_north_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="40dp"
+                android:background="#00ff0000"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/map_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/seoul_mid"></ImageView>
+
+            <ImageButton
+                android:id="@+id/icon_indepen"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="150dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_indepen" />
+
+            <ImageButton
+                android:id="@+id/icon_jongmyo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="240dp"
+                android:layout_marginTop="135dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_jongmyo" />
+
+            <ImageButton
+                android:id="@+id/icon_gyungbok"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="95dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_gyeongbok" />
+
+            <ImageButton
+                android:id="@+id/icon_changgyung"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="105dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_changgyeonggung" />
+
+            <ImageButton
+                android:id="@+id/icon_changduck"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="215dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_changdeokgung" />
+
+            <ImageButton
+                android:id="@+id/icon_gyunghee"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="125dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_gyeonghui" />
+
+            <ImageButton
+                android:id="@+id/icon_ducksu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="205dp"
+                android:layout_marginTop="160dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_deoksugung" />
+
+            <ImageButton
+                android:id="@+id/icon_busin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="130dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_bosingak" />
+
+            <ImageButton
+                android:id="@+id/icon_dongdaemun"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="165dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_dongdaemun" />
+
+            <ImageButton
+                android:id="@+id/icon_namdaemun"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="205dp"
+                android:layout_marginTop="190dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_namdaemun" />
+
+            <ImageButton
+                android:id="@+id/icon_bukdaemun"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="90dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_bukdaemun" />
+
+            <ImageView
+                android:id="@+id/map_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/seoul_east"></ImageView>
+
+            <ImageButton
+                android:id="@+id/icon_amsadong"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="145dp"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_amsadong"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/map_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/seoul_west"></ImageView>
+
+            <ImageButton
+                android:id="@+id/icon_yangchun"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="75dp"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_yangcheonhyanggyo"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/map_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/seoul_south"></ImageView>
+
+            <ImageButton
+                android:id="@+id/icon_nakjungdae"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="155dp"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_nakseong"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/icon_huninreung"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="165dp"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_heoninneung"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/map_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/seoul_north"></ImageView>
+
+            <ImageButton
+                android:id="@+id/icon_taereung"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="125dp"
+                android:onClick="onClick"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_taereung"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/maintext1"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:background="?attr/colorPrimary"
+                    android:text="서울의 5대궁"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="60px" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_gyeonbok"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_gyenbok"
+                            android:onClick="onClick"
+                            android:text="경복궁"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_changduk"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_changduk"
+                            android:onClick="onClick"
+                            android:text="창덕궁"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_changgyung"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_changgyung"
+                            android:onClick="onClick"
+                            android:text="창경궁"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_gyunghee"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_gyunghee"
+                            android:onClick="onClick"
+                            android:text="경희궁"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_duksu"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_duksu"
+                            android:onClick="onClick"
+                            android:text="덕수궁"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/maintext2"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="?attr/colorPrimary"
+                    android:text="서울의 4대문"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="60px" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_dongdae"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_dongdae"
+                            android:onClick="onClick"
+                            android:text="흥인지문"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_namdae"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_namdae"
+                            android:onClick="onClick"
+                            android:text="숭례문"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_bukdae"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bukdae"
+                            android:onClick="onClick"
+                            android:text="숙정문"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/maintext3"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="?attr/colorPrimary"
+                    android:text="서울의 왕릉"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="60px" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_taereung"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_taereung"
+                            android:onClick="onClick"
+                            android:text="태릉"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_hyuninreung"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/btn_hyuninreung"
+                            android:onClick="onClick"
+                            android:text="현인릉"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/main_stampall_tab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/stamp1"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="종묘"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp2"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="낙성대"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp1"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp3"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="독립문"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/stamp4"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="경복궁"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp5"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="창덕궁"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp4"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp6"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="창경궁"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp5"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/stamp7"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="경희궁"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp8"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="덕수궁"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp7"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp9"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="보신각"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp8"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/stamp10"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="동대문"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp12"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="숭례문"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp10"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp13"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="숙정문"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp12"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/stamp14"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="태강릉"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp15"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp15"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="헌인릉"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp14"
+                    app:layout_constraintRight_toLeftOf="@+id/stamp16"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/stamp16"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="양천향교"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/stamp15"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/stamp17"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/stamp_gray"
+                    android:scaleType="fitXY"
+                    android:text="암사동유적"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+        </TableLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarMain"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1" />
+
+</android.support.constraint.ConstraintLayout>

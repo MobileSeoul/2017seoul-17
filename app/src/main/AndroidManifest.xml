@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kjh.seoulapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- dont work on virtual machine -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- detail location -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:name=".ApplicationFont"
+        >
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/daum_api_key" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TourMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TourRegionActivity"
+            android:label="@string/region_activity_label"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".QuizProblemActivity"
+            android:label="@string/quiz_problem_activity_label"
+            />
+        <activity
+            android:name=".PopupActivity"
+            android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".ARActivity"
+            android:label="@string/quiz_problem_end_activity_label"
+            />
+    </application>
+
+</manifest>

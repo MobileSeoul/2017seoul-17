@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">역사의제왕 서울원정대</string>
+
+    <string name="region_activity_label">유적지 정보</string>
+    <string name="quiz_problem_activity_label">문제풀이</string>
+    <string name="quiz_problem_end_activity_label">도장찍기</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="sign_out">로그아웃</string>
+    <string name="action_search">Search</string>
+    <string name="howto_desc">"유적지 근처에 있을 때, 문제풀기 버튼이 활성화됩니다. 문제풀기 버튼을 누르면 문제가 나옵니다. \n문제풀기를 하면 도장1개를 획득하며, 맞춘 갯수에 따라 도장을 추가 획득할수 있습니다. \n문제를 풀고 도장을 획득하세요!"</string>
+    <string name="daum_api_key">eaceb6c22d46c5b24797373ac32e32c5</string>
+
+</resources>
